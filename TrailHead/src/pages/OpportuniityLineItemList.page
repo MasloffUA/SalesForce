@@ -1,0 +1,10 @@
+<apex:page controller="OpportunityLineItemsListController">
+        <apex:pageBlock >
+    		<apex:pageBlockTable value="{! items }" var="item">
+    			<apex:column value="{! item.Name }"/>
+   				<apex:column value="{! item.Quantity }"/>
+    			<apex:column value="{! item.UnitPrice }"/> 
+			</apex:pageBlockTable>
+        </apex:pageBlock>
+
+</apex:page>
