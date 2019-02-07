@@ -1,10 +1,13 @@
-<apex:page controller="OpportunityLineItemsListController">
-        <apex:pageBlock >
-    		<apex:pageBlockTable value="{! items }" var="item">
-    			<apex:column value="{! item.Name }"/>
-   				<apex:column value="{! item.Quantity }"/>
-    			<apex:column value="{! item.UnitPrice }"/> 
-			</apex:pageBlockTable>
+<apex:page standardController="Account" extensions="OpportunityLineItemsListController">
+        <apex:pageBlock title="Opportunity Line Items">
+            <apex:pageBlockSection >
+                <apex:pageBlockTable value="{! items }" var="item">
+                    <apex:column value="{! item.Name }"/>
+                    <apex:column value="{! item.Quantity }"/>
+                    <apex:column value="{! item.UnitPrice }"/>
+					<apex:column value="{! item.TotalPrice}"/> 
+                    <apex:column value="{! item.OpportunityId}"/>
+                </apex:pageBlockTable>
+            </apex:pageBlockSection>
         </apex:pageBlock>
-
 </apex:page>
